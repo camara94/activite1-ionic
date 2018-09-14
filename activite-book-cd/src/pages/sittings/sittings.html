@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="onToggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Réglages</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row padding-top>
+      <ion-col width-100>
+        <ion-list>
+          <ion-label>Entrée un nom : </ion-label>
+          <ion-item>
+            <ion-input type="text" placeholder="The placeholder text color I want to display in another color than the default one"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

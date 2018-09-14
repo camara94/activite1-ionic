@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="onToggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      The Programming Books
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let book of booksList; let i = index" (click)="onLoadBook(i)">{{book.titre}}</button>
+  </ion-list>
+</ion-content>
+
+<ion-footer padding>
+  <p>Tout droit réservé, Camara prod</p>
+</ion-footer>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button clear (click)="onCloseModal()">Fermer</button>
+    <ion-title>{{book.titre}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card [ngClass]="{'pret':book.pret,'rend':!book.pret}">
+    <ion-card-header><strong>Le titre du livre : </strong>{{book.titre}}</ion-card-header>
+    <ion-card-content>
+      <p><strong>L'auteur du livre : </strong>{{book.autor}}</p>
+      <p><strong>La date de parition du livre : </strong>{{book.date}}</p>
+      <p><strong>Le site : </strong>{{book.site}}</p>
+    </ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button color="rend" full [disabled]="!book.pret" (click)="onRP()">Rendre </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button color="pret" full [disabled]="book.pret" (click)="onRP()">Prêter</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

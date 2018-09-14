@@ -1,0 +1,20 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      Menu
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item icon-start (click)="onNavigate(tabsPage)">
+        <ion-icon name="archive"></ion-icon>
+        Les livres et CDs
+      </button>
+      <button ion-item icon-start (click)="onNavigate(sittingsPage)">
+        <ion-icon name="settings"></ion-icon>
+        Les réglages
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="tabsPage" #content></ion-nav>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button clear (click)="onCloseModal()">Fermer</button>
+    <ion-title>{{cd.titre}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card [ngClass]="{'pret':cd.pret,'rend':!cd.pret}">
+    <ion-card-header><strong>Le titre du CD : </strong>{{cd.titre}}</ion-card-header>
+    <ion-card-content>
+      <p><strong>L'auteur du CD : </strong>{{cd.auteur}}</p>
+      <p><strong>La date de parition du CD : </strong>{{cd.date}}</p>
+    </ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button ion-button color="rend" full [disabled]="!cd.pret" (click)="onRP()">Rendre </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button color="pret" full [disabled]="cd.pret" (click)="onRP()">Prêter</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
